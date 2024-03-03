@@ -4,17 +4,19 @@
 function iterativeOddSumTo(number) {
 
    let sum = 0;
-   for (let i = 1; i <= number; i++) {
-  
    
- 
-    sum += i;
-   }
-   
-  return sum;
-}
+   for (let i = 1; i <= iterativeOddSumTo; i++) 
+   {
 
-    
+   
+   if (i % 2 == 0)
+
+   
+   sum += i;
+   } 
+  
+
+}
     console.log(iterativeOddSumTo(1)) // 1
     console.log(iterativeOddSumTo(9)) // 25
     console.log(iterativeOddSumTo(10)) // 25
@@ -30,5 +32,5 @@ function iterativeOddSumTo(number) {
     
     console.log(recursiveOddSumTo(1)) // 1
     console.log(recursiveOddSumTo(9)) // 25
-    console.log(recursiveOddSumTo(10)) // 25
+    console.log(recursiveOddSumTo(10)) // 25 
     

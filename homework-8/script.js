@@ -5,14 +5,13 @@
    
 
 
-function addThemAll(){
-    var total =  0;
-    for(let i=0; i<arguments.length; i++){
-       total += arguments[i];
-    }
-    return total;
-  }
-     
+function addThemAll(...args){
+  return args.reduce(function(a, b) {
+    return a + b;
+}, 0);
+ 
+}
+
      console.log(addThemAll(2,4)); // 6
      console.log(addThemAll(1,2,3,4)); // 10
      console.log(addThemAll(5,5,10)); // 20

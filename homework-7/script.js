@@ -4,7 +4,7 @@ const resultsArray = [1, 2, [3, [4]]];
 let productOfArray = resultsArray.flat(Infinity).reduce (
     (accumulator,currentValue)=>
     accumulator * currentValue,
-    );
+    1);
 
 console.log(productOfArray); // 24
 
@@ -16,34 +16,41 @@ console.log(productOfArray); // 24
     BANANAS: '48',
     oRAngGEs: '48.7584',
     };
-   
-    let updatedPriceData = Object.fromEntries(
-        
-        Object.entries(priceData).map(([key, value]) =>[key.toLowerCase(),value]));
-    
-      console.log(updatedPriceData);
-      
-    function optimizer(data) { // не зовсiм розумiю навiщо потрiбна функцiя.не виходить написати(вже тиждень сиджу над цим)
- 
- let data = parseFloat(updatedPriceData[Object.value]);
- return data;
-}  
-optimizer();
-console.log(data.toFixed(2))   
   
+        function optimizer(data) {
+            return Object.fromEntries(
+              Object.entries(data).map(([key, value]) => [key.toLowerCase(),value= Number(value).toFixed(2)])
+            );
+          }
+        
+
+        console.log(optimizer(priceData));
+          let updatedPriceData = optimizer(priceData);
+       console.log(updatedPriceData);
+
+      
+
   
   // console.log(updatedPriceData) // {apples: '23.40', bananas: '48.00', oranges: '48.76'}
    3.
-    /*
+    
 
-    const userNames = ['Петро', 'Емма', 'Юстин', 'Ілля', 'Марта', 'Яна', 'Василь', 'Антон', 'Олена'];
+    const userNames3 = ['Петро', 'Емма', 'Юстин', 'Ілля', 'Марта', 'Яна', 'Василь', 'Антон', 'Олена'];
+    let filteredNames = ['А','У','О','Я', 'Е','Ю','I']
+    let result = userNames3.filter((item) => item.startsWith(filteredNames));
+
+    console.log(result);
+  
 
 
-    let filteredNames = userNames.filter((name) => name.startsWith("Ю") || name.startsWith("О") || name.startsWith("А") || name.startsWith("Я") || name.startsWith("Е")|| name.startsWith("I"));
+
+    
+    
+
+    //let filteredNames = userNames.filter((name) => name.startsWith("Ю") || name.startsWith("О") || name.startsWith("А") || name.startsWith("Я") || name.startsWith("Е")|| name.startsWith("I"));
 
    //можливо якось можна пiд однi дужки всi голоснi взяти?
-
-console.log(filteredNames); // ['Емма', 'Юстин', 'Ілля', 'Яна', 'Антон', 'Олена']*/
+ // ['Емма', 'Юстин', 'Ілля', 'Яна', 'Антон', 'Олена']*/
    
     3.1
       

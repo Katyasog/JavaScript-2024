@@ -1,5 +1,4 @@
 "use strict"
-            
 
 
 function iterativeOddSumTo(number) {
@@ -11,8 +10,6 @@ return number * number /4;
     console.log(iterativeOddSumTo(1)) // 1
     console.log(iterativeOddSumTo(9)) // 25
     console.log(iterativeOddSumTo(10)) // 25
-
-
 
   2.
 
@@ -29,5 +26,4 @@ return n + recursiveOddSumTo(n - 2);
     
     console.log(recursiveOddSumTo(1)) // 1
     console.log(recursiveOddSumTo(9)) // 25
-    console.log(recursiveOddSumTo(10)) // 25
-    
+    console.log(recursiveOddSumTo(10)) // 25 

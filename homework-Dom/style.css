@@ -1,0 +1,28 @@
+.offButton{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+background-color: rgb(199, 167, 167);
+
+}
+
+.textButtonOff{
+    color: white;
+
+}
+
+
+
+.TurnOffDate{
+    margin-top:400px;
+    text-align: center;
+    
+}
+.TurnOffDate2{
+    text-align: center;
+   
+}

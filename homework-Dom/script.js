@@ -5,20 +5,21 @@ const offButton= document.querySelector(".offButton");
 
 offButton.addEventListener('click',() => {
 
-if (offButton.getAttribute("data-text") == offButton.innerHTML) {
-    offButton.innerHTML = offButton.getAttribute("data-text1");
-    document.body.style.backgroundColor="brown";
+if (offButton.getAttribute("button-text-on") == offButton.innerHTML) {
+    offButton.innerHTML = offButton.getAttribute("button-text-off");
+    document.body.style.backgroundColor="white";
     const lastTurnOff = new Date().toLocaleString("en-GB");
-    localStorage.lastTurnOff = lastTurnOff;
     const localStorageDateOff = new Date(localStorage.lastTurnOff);
+    localStorage.setItem(lastTurnOff,"off");
+
 
 document.getElementById("currentDate").innerText = lastTurnOff;
 } else {
-    offButton.setAttribute("data-text1", offButton.innerHTML);
-    offButton.innerHTML =offButton.getAttribute("data-text");
-    document.body.style.backgroundColor="white";
+    offButton.setAttribute("button-text-off", offButton.innerHTML);
+    offButton.innerHTML =offButton.getAttribute("button-text-on");
+    document.body.style.backgroundColor="brown";
     const lastTurnOn = new Date().toLocaleString("en-GB");
-    localStorage.lastTurnOn = lastTurnOn;
+    localStorage.setItem(lastTurnOn,"on");
     const localStorageDateOn = new Date(localStorage.lastTurnOn);
    
 document.getElementById("currentDate2").innerText = lastTurnOn;

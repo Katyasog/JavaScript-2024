@@ -36,17 +36,20 @@ const movies = [
 
 
  
-function byProperty(releaseYear) {
+function byProperty(property,direction) {
 	
-		return (a, b) => a[releaseYear] > b[releaseYear] ? 1 : -1;
+	if (direction === '>') {
+		return (a, b) => a[property] > b[property] ? 1:-1 ;}
+	if (direction === '<') {
+	return (a, b) => a[property] < b[property] ? 1:-1 ;
 	  }
-
-
+	 
+	};
 console.log(movies.sort(byProperty('releaseYear', '>'))); 
 // виведе масив фільмів посортованих по року випуску, від старішого до новішого
-console.log(movies.sort(byProperty('runningTimeInMinutes', '<'))); 
+//console.log(movies.sort(byProperty('runningTimeInMinutes', '<'))); 
 // виведе масив фільмів посортованих по їх тривалості, від найдовшого до найкоротшого
-console.log(movies.sort(byProperty('movieName', '>'))); 
+//console.log(movies.sort(byProperty('movieName', '>'))); 
 // виведе масив фільмів посортованих по назві, в алфавітному порядку
 
 
@@ -62,9 +65,9 @@ console.log(func)
 function slower(func, seconds) {
 // тут ваш код для декоратора
 
-return function() {
+return function(...args) {
 	console.log("Chill out, you will get you result in " + seconds + "seconds");
-	setTimeout(() => func.apply(this, arguments), seconds * 1000);
+	setTimeout(() => func.apply(this,args), seconds * 1000);
 }
 }
 
